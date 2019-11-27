@@ -20,7 +20,7 @@ libertine_compile_build_pax()
 {
 	pushd "$(libertine_public_sourcePath)"
 		
-		sed -i -e -i '/stat.h/a #include <sys/sysmacros.h>' cpio.c gen_subs.c tar.c &&
+		sed -i -e -i '/stat.h/a #include <sys/sysmacros.h>' cpio.c gen_subs.c tar.c
 
 		set +f
 			"$libertine_build"-cc -DLONG_OFF_T -o pax -DPAX_SAFE_PATH=\"/usr/bin\" *.c
